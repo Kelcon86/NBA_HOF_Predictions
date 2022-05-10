@@ -1,4 +1,6 @@
-# NBA_HOF_Predictions
+# NBA Hall of Fame Predictions
+
+<img width="278" alt="TeamMemberImage" src="https://user-images.githubusercontent.com/60076980/167540300-ffa4de9b-1887-4f59-9922-3a1569c28a65.png">
 
 
 Content
