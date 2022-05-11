@@ -1,17 +1,19 @@
 # NBA_HOF_Predictions
 
+## Selected topic
 
-Content
-Team members have drafted their
-project, including the following:
-✓ Selected topic
-✓ Reason why they selected their topic
-✓ Description of their source of data
-✓ Questions they hope to answer with
-the data
-Note: The content does not yet need to
-be in the form of a presentation; text in
-the README.md works as well. 
+
+## Reason why topic was selected
+
+## Data Source Description
+- nba_hof_rookies.csv 
+
+<img width="1004" alt="Data_image" src="https://user-images.githubusercontent.com/60076980/167962935-2c5b4c90-f5e9-4a8e-8895-c0e7bf329876.png">
+
+## Questions we hope to answer with the data
+- To what extent can we accurately predict an NBA players induction into the Hall of Fame on the basis of their statistics from their rookie season
+
+
 
 
 Main Branch
