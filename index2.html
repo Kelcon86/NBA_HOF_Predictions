@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Hall of Fame Predictions</title>
+
+
+    <!--link to BootStrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous" />
+
+
+    <!--link to external CSS file-->
+    <link rel="stylesheet" href="static2/css2/style.css">
+
+</head>
+
+<body class="bg-dark">
+
+    <div class="wrapper">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+            <a class="navbar-brand" href="index2.html">NBA Hall of Fame Predictions</a>
+        </nav>
+    </div>
+
+
+
+    <!--Webpage Header-->
+    <div class="jumbotron">
+        <h1 class="display-4"></h1>
+    </div>
+
+    <!--Article Title and Paragraph-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <h3> NBA rookie seasons
+                    <small>Correlation to making it in Hall of Fame?</small>
+                </h3>
+            </div>
+
+            <div class="col-md-8">
+                <p>
+                    Is it possible to predict the likelihood of an NBA player being inducted into the Hall of Fame based on their rookie year
+                    stats?
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--Filter and Table-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <form class="bg-dark">
+                    <p>
+                        <b>
+                            <u>FILTER SEARCH</u>
+                        </b>
+                    </p>
+                    <ul class="bg-dark">
+
+                        <!-- CHALLENGE NEED - Filter Using New <form> Tag-->
+                        <li class="list-group" class="btn-dark">
+                            <label for="name">Enter Name</label>
+                            <input type="text" placeholder="Michael Jordan" id="name" />
+                        </li>
+
+                        <li class="list-group" class="btn-dark">
+                            <button id="filter-btn" type="button" class="btn-dark">
+                                Filter Table
+                            </button>
+
+                            <button id="clear-btn" type="button" class="btn-dark">
+                                Clear Table
+                            </button>
+
+                        </li>
+
+                    </ul>
+                </form>
+            </div>
+
+
+            <!--Dynamic Table-->
+            <div class="col-md-9">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Hall of Fame Class</th>
+                            <th>Year Drafted</th>
+                            <th>GP</th>
+                            <th>Min</th>
+                            <th>Points</th>
+                            <th>FGM</th>
+                            <th>FGA</th>
+                            <th>FG%</th>
+                            <th>3P Made</th>
+                            <th>3 Point Attempts</th>
+                            <th>3P%</th>
+                            <th>FTM</th>
+                            <th>FTA</th>
+                            <th>FT%</th>
+                            <th>OREB</th>
+                            <th>DREB</th>
+                            <th>REB</th>
+                            <th>AST</th>
+                            <th>STL</th>
+                            <th>BLK</th>
+                            <th>TOV</th>
+                            <th>EFF</th>
+
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+        </div>
+
+        <!--JS Script with D3 Library-->
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+    <script src="static2/js/data.js"></script>
+    <script src="static2/js/app.js"></script>
+</body>
+
+</html>
+<!--
