@@ -18,40 +18,33 @@ We found several datasets that contained data for this topic, but ultimately cho
 Our group has communicated through a dedicated Slack channel as well as via Zoom.
 
 
+Segment 2 Rubric
+The presentation outlines the project, including the following:
 
-Main Branch
-✓ Includes a README.md
-README.md
-README.md must include:
-✓ Description of the communication
-protocols
-Individual Branches
-✓ At least one branch for each team
-member
-✓ Each team member has at least four
-commits from the duration of the first
-segment
-Note: The descriptions and
-explanations required in all other
-project deliverables should also be in
-your README.md as part of your
-outline, unless otherwise noted.
+- Selected topic
+- Reason topic was selected
+- Description of the source of data
+- Questions the team hopes to answer with the data
+- Description of the data exploration phase of the project
+- Description of the analysis phase of the project
+
+Slides
+- Presentations are drafted in Google Slides.
+
+- Description of the communication protocols
+- Outline of the project (this may include images, but they should be easy to follow and digest)
+
+Machine Learning:
+- Description of preliminary data preprocessing
+- Description of preliminary feature engineering and preliminary feature selection, including the decision-making process
+- Description of how data was split into training and testing sets
+- Explanation of model choice, including limitations and benefits
+
+Dashboard (15 points)
+- A blueprint for the dashboard is created and includes all of the following:
+
+- Storyboard on a Google Slide(s)
+- Description of the tool(s) that will be used to create the final dashboard
+- Description of interactive element(s)
 
 
-Team members present a provisional
-machine learning model that stands in
-for the final machine learning model
-and accomplishes the following:
-✓ Takes in data in from the provisional
-database
-✓ Outputs label(s) for input data
-
-Team members present a provisional
-database that stands in for the final
-database and accomplishes the
-following:
-✓ Sample data that mimics the
-expected final database structure or
-schema
-✓ Draft machine learning module is
-connected to the provisional database 
