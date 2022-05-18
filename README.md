@@ -51,11 +51,38 @@ Slides
 - Outline of the project (this may include images, but they should be easy to follow and digest)
 
 
+Machine Learning:
+- Description of preliminary data preprocessing
+
+    *   The preliminary data preprocessing began prior to the data being loaded into the database. There were a few irregularies apon first inspection of the data. The first step was replacing any strings representing zeros with the actual interger 0. There were a few number of instantces in the `3P%` column where, rather than a 0, a hyphen was entered. This resulted in the column being labled as an `object` rather than a `float64` using the pandas `.dtypes`. This column would cause errors within our machine leanring process. The hyphens were converted using the pandas `.to_numeric()` function with this code:
+
+        ```rookies_df['3P%'] = rookies_df['3P%'].replace({'-':'0'})```
+
+    *   The next step was filling in any NaNs. The majority of NaNs were found in the `Hall of Fame Class` column since if a player had not been inducted, they would not have a class year assoicated with them. This was addressed by replacing and filling in these with the labels "Hall of Fame Member" and "Not Inducted".
+
+    *   Lastly, using the pandas `.get_dummies()` function our `Hall of Fame Class` column was encoded to separate the "inducted" and "not_inducted" players into separate columns since the "inducted" column will be our target for our machine learning model.   
+
+- Description of preliminary feature engineering and preliminary feature selection, including the decision-making process
+
+    *   Feature selection has been minimal at this point in our project, but at our instructor's advice we began by removing the `year_drafted` and `gp (games played)` columns to allow our machine learning model to focus purly on in-game statics like points, shots made, shot attempts, turnovers, etc.
+
+- Description of how data was split into training and testing sets
+
+    *   The data was shuffled and split into the training and test sets using the default parameters, which is `train_size = 0.25` and `test_size = 0.75` per [the sklearn documentation](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html).
+
+- Explanation of model choice, including limitations and benefits
+
+
+    *   The largest limitation of our dataset is that it is highly imbalanced. The basketball Hall of Fame, which has existed since the inagural class of 1959, has only, at most, **178** players. Our dataset, which has data going as far back as the draft class of 1980, has less than 40 Hall of Fame players out of the over 1500 players in the dataset. Because of this, we ran several imbalanced-learn oversampleing methods following the train-test splitting.
+        *   The three oversampling methods we have used so far include:
+            *   RandomOverSampler
+            *   SMOTE
+            *   SVM SMOTE
+    *   One of the benefits of our data is that it includes classifications, the "Hall of Fame Class" column, so we can use a supervised classificaion machine learning model. Specifcaily we are using the **scikit-learn logistic regression** method for our data fitting. In addition, we are experimented with the `solver=liblinear` rather than the default `solver=lbfgs` since according to [this website](https://holypython.com/log-reg/logistic-regression-optimization-parameters/) it is a more efficient solver with smaller datasets. Preliminary results show an improvement in our model accuracy using this solver vs "lbfgs".
+
 Dashboard (15 points)
 - A blueprint for the dashboard is created and includes all of the following:
 
 - Storyboard on a Google Slide(s)
 - Description of the tool(s) that will be used to create the final dashboard
 - Description of interactive element(s)
-
-
