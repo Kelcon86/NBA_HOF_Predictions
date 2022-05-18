@@ -20,38 +20,6 @@ We found several datasets that contained data for this topic, but ultimately cho
 Our group has communicated through a dedicated Slack channel as well as via Zoom.
 
 ## Machine Learning
-- Logistic regression, supervised machine learning ... 
-
-- Description of preliminary data preprocessing
-- Description of preliminary feature engineering and preliminary feature selection, including the decision-making process
-- Description of how data was split into training and testing sets
-- Explanation of model choice, including limitations and benefits
-
-## Database
-A database was created using SQL ... 
-
-## Dashboard
-We will be using Tableau to create a dashboard. 
-
-
-Segment 2 Rubric
-The presentation outlines the project, including the following:
-
-- Selected topic
-- Reason topic was selected
-- Description of the source of data
-- Questions the team hopes to answer with the data
-- Description of the data exploration phase of the project
-- Description of the analysis phase of the project
-
-Slides
-- Presentations are drafted in Google Slides.
-
-- Description of the communication protocols
-- Outline of the project (this may include images, but they should be easy to follow and digest)
-
-
-Machine Learning:
 - Description of preliminary data preprocessing
 
     *   The preliminary data preprocessing began prior to the data being loaded into the database. There were a few irregularies apon first inspection of the data. The first step was replacing any strings representing zeros with the actual interger 0. There were a few number of instantces in the `3P%` column where, rather than a 0, a hyphen was entered. This resulted in the column being labled as an `object` rather than a `float64` using the pandas `.dtypes`. This column would cause errors within our machine leanring process. The hyphens were converted using the pandas `.to_numeric()` function with this code:
@@ -79,6 +47,29 @@ Machine Learning:
             *   SMOTE
             *   SVM SMOTE
     *   One of the benefits of our data is that it includes classifications, the "Hall of Fame Class" column, so we can use a supervised classificaion machine learning model. Specifcaily we are using the **scikit-learn logistic regression** method for our data fitting. In addition, we are experimented with the `solver=liblinear` rather than the default `solver=lbfgs` since according to [this website](https://holypython.com/log-reg/logistic-regression-optimization-parameters/) it is a more efficient solver with smaller datasets. Preliminary results show an improvement in our model accuracy using this solver vs "lbfgs".
+
+## Database
+A database was created using SQL ... 
+
+## Dashboard
+We will be using Tableau to create a dashboard. 
+
+
+Segment 2 Rubric
+The presentation outlines the project, including the following:
+
+- Selected topic
+- Reason topic was selected
+- Description of the source of data
+- Questions the team hopes to answer with the data
+- Description of the data exploration phase of the project
+- Description of the analysis phase of the project
+
+Slides
+- Presentations are drafted in Google Slides.
+
+- Description of the communication protocols
+- Outline of the project (this may include images, but they should be easy to follow and digest)
 
 Dashboard (15 points)
 - A blueprint for the dashboard is created and includes all of the following:
