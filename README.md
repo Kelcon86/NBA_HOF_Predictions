@@ -55,6 +55,13 @@ Machine Learning:
 
 - Explanation of model choice, including limitations and benefits
 
+    *   The largest limitation of our dataset is that it is highly imbalanced. The basketball Hall of Fame, which has existed since the inagural class of 1959, has only, at most, **178** players. Our dataset, which has data going as far back as the draft class of 1980, has less than 40 Hall of Fame players out of the over 1500 players in the dataset. Because of this, we ran several imbalanced-learn oversampleing methods following the train-test splitting.
+        *   The three oversampling methods we have used so far include:
+            *   RandomOverSampler
+            *   SMOTE
+            *   SVM SMOTE
+    *   One of the benefits of our data is that it includes classifications, the "Hall of Fame Class" column, so we can use a supervised classificaion machine learning model. Specifcaily we are using the **scikit-learn logistic regression** method for our data fitting. In addition, we are experimented with the `solver=liblinear` rather than the default `solver=lbfgs` since according to [this website](https://holypython.com/log-reg/logistic-regression-optimization-parameters/) it is a more efficient solver with smaller datasets. Preliminary results show an improvement in our model accuracy using this solver vs "lbfgs".
+
 Dashboard (15 points)
 - A blueprint for the dashboard is created and includes all of the following:
 
