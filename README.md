@@ -4,7 +4,7 @@
 NBA Hall of Fame predictions based on players rookie year statistics
 
 ## Reason why topic was selected
-After brainstorming we found that everyone in the group had an interest in sports. We knew there would be an abundance of data for professional sports leagues and decided to choose a topic involving the National Basketball Association (NBA). 
+After brainstorming we found that everyone in the group had an interest in sports. We knew there would be an abundance of data for professional sports leagues and decided to choose a topic involving the National Basketball Association (NBA). We were interested to see if there was any correlation between a players induction into the Hall of Fame and their rookie year statistics.
 
 ## Data Source Description
 We found several datasets that contained data for this topic, but ultimately chose to use NBA Rookies by Year_Hall of Fame Class.xlsx found on data.world. This file was then converted into a csv (nba_hof_rookies.csv).
@@ -13,9 +13,25 @@ We found several datasets that contained data for this topic, but ultimately cho
 
 ## Questions we hope to answer with the data
 - Can we accurately predict an NBA players induction into the Hall of Fame based on their statistics from their rookie season
+- Were rookie players in a certain position more likely to be inducted into the Hall of Fame?
+- Was there a correlation between rookie year statistics and length of career for players inducted into the Hall of Fame?
 
 ## Description of the communication protocols
 Our group has communicated through a dedicated Slack channel as well as via Zoom.
+
+## Machine Learning
+- Logistic regression, supervised machine learning ... 
+
+- Description of preliminary data preprocessing
+- Description of preliminary feature engineering and preliminary feature selection, including the decision-making process
+- Description of how data was split into training and testing sets
+- Explanation of model choice, including limitations and benefits
+
+## Database
+A database was created using SQL ... 
+
+## Dashboard
+We will be using Tableau to create a dashboard. 
 
 
 Segment 2 Rubric
@@ -33,6 +49,7 @@ Slides
 
 - Description of the communication protocols
 - Outline of the project (this may include images, but they should be easy to follow and digest)
+
 
 Machine Learning:
 - Description of preliminary data preprocessing
@@ -54,6 +71,7 @@ Machine Learning:
     *   The data was shuffled and split into the training and test sets using the default parameters, which is `train_size = 0.25` and `test_size = 0.75` per [the sklearn documentation](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html).
 
 - Explanation of model choice, including limitations and benefits
+
 
     *   The largest limitation of our dataset is that it is highly imbalanced. The basketball Hall of Fame, which has existed since the inagural class of 1959, has only, at most, **178** players. Our dataset, which has data going as far back as the draft class of 1980, has less than 40 Hall of Fame players out of the over 1500 players in the dataset. Because of this, we ran several imbalanced-learn oversampleing methods following the train-test splitting.
         *   The three oversampling methods we have used so far include:
