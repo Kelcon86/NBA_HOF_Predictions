@@ -46,6 +46,9 @@ Machine Learning:
     *   Lastly, using the pandas `.get_dummies()` function our `Hall of Fame Class` column was encoded to separate the "inducted" and "not_inducted" players into separate columns since the "inducted" column will be our target for our machine learning model.   
 
 - Description of preliminary feature engineering and preliminary feature selection, including the decision-making process
+
+    *   Feature selection has been minimal at this point in our project, but at our instructor's advice we began by removing the `year_drafted` and `gp (games played)` columns to allow our machine learning model to focus purly on in-game statics like points, shots made, shot attempts, turnovers, etc.
+
 - Description of how data was split into training and testing sets
 - Explanation of model choice, including limitations and benefits
 
