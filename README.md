@@ -36,6 +36,15 @@ Slides
 
 Machine Learning:
 - Description of preliminary data preprocessing
+
+    *   The preliminary data preprocessing began prior to the data being loaded into the database. There were a few irregularies apon first inspection of the data. The first step was replacing any strings representing zeros with the actual interger 0. There were a few number of instantces in the `3P%` column where, rather than a 0, a hyphen was entered. This resulted in the column being labled as an `object` rather than a `float64` using the pandas `.dtypes`. This column would cause errors within our machine leanring process. The hyphens were converted using the pandas `.to_numeric()` function with this code:
+
+        ```rookies_df['3P%'] = rookies_df['3P%'].replace({'-':'0'})```
+
+    *   The next step was filling in any NaNs. The majority of NaNs were found in the `Hall of Fame Class` column since if a player had not been inducted, they would not have a class year assoicated with them. This was addressed by replacing and filling in these with the labels "Hall of Fame Member" and "Not Inducted".
+
+    *   Lastly, using the pandas `.get_dummies()` function our `Hall of Fame Class` column was encoded to separate the "inducted" and "not_inducted" players into separate columns since the "inducted" column will be our target for our machine learning model.   
+
 - Description of preliminary feature engineering and preliminary feature selection, including the decision-making process
 - Description of how data was split into training and testing sets
 - Explanation of model choice, including limitations and benefits
