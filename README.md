@@ -19,16 +19,20 @@ We found several datasets that contained data for this topic, but ultimately cho
 ## Description of the communication protocols
 Our group has communicated through a dedicated Slack channel as well as via Zoom.
 
-## Machine Learning
+## Data Exploration Phase
 - Description of preliminary data preprocessing
 
-    *   The preliminary data preprocessing began prior to the data being loaded into the database. There were a few irregularies apon first inspection of the data. The first step was replacing any strings representing zeros with the actual interger 0. There were a few number of instantces in the `3P%` column where, rather than a 0, a hyphen was entered. This resulted in the column being labled as an `object` rather than a `float64` using the pandas `.dtypes`. This column would cause errors within our machine leanring process. The hyphens were converted using the pandas `.to_numeric()` function with this code:
+    *   The preliminary data preprocessing began prior to the data being loaded into the database. There were a few irregularities upon first inspection of the data. The first step was replacing any strings representing zeros with the actual integer 0. There were a few number of instantces in the `3P%` column where, rather than a 0, a hyphen was entered. This resulted in the column being labled as an `object` rather than a `float64` using the pandas `.dtypes`. This column would cause errors within our machine learning process. The hyphens were converted using the pandas `.to_numeric()` function with this code:
 
         ```rookies_df['3P%'] = rookies_df['3P%'].replace({'-':'0'})```
 
     *   The next step was filling in any NaNs. The majority of NaNs were found in the `Hall of Fame Class` column since if a player had not been inducted, they would not have a class year assoicated with them. This was addressed by replacing and filling in these with the labels "Hall of Fame Member" and "Not Inducted".
 
-    *   Lastly, using the pandas `.get_dummies()` function our `Hall of Fame Class` column was encoded to separate the "inducted" and "not_inducted" players into separate columns since the "inducted" column will be our target for our machine learning model.   
+    *   Lastly, using the pandas `.get_dummies()` function our `Hall of Fame Class` column was encoded to separate the "inducted" and "not_inducted" players into separate columns since the "inducted" column will be our target for our machine learning model.  
+
+## Analysis Phase
+
+## Machine Learning 
 
 - Description of preliminary feature engineering and preliminary feature selection, including the decision-making process
 
@@ -41,12 +45,12 @@ Our group has communicated through a dedicated Slack channel as well as via Zoom
 - Explanation of model choice, including limitations and benefits
 
 
-    *   The largest limitation of our dataset is that it is highly imbalanced. The basketball Hall of Fame, which has existed since the inagural class of 1959, has only, at most, **178** players. Our dataset, which has data going as far back as the draft class of 1980, has less than 40 Hall of Fame players out of the over 1500 players in the dataset. Because of this, we ran several imbalanced-learn oversampleing methods following the train-test splitting.
+    *   The largest limitation of our dataset is that it is highly imbalanced. The basketball Hall of Fame, which has existed since the inagural class of 1959, has only, at most, **178** players. Our dataset, which has data going as far back as the draft class of 1980, has less than 40 Hall of Fame players out of the over 1500 players in the dataset. Because of this, we ran several imbalanced-learn oversampling methods following the train-test splitting.
         *   The three oversampling methods we have used so far include:
             *   RandomOverSampler
             *   SMOTE
             *   SVM SMOTE
-    *   One of the benefits of our data is that it includes classifications, the "Hall of Fame Class" column, so we can use a supervised classificaion machine learning model. Specifcaily we are using the **scikit-learn logistic regression** method for our data fitting. In addition, we are experimented with the `solver=liblinear` rather than the default `solver=lbfgs` since according to [this website](https://holypython.com/log-reg/logistic-regression-optimization-parameters/) it is a more efficient solver with smaller datasets. Preliminary results show an improvement in our model accuracy using this solver vs "lbfgs".
+    *   One of the benefits of our data is that it includes classifications, the "Hall of Fame Class" column, so we can use a supervised classification machine learning model. Specifically we are using the **scikit-learn logistic regression** method for our data fitting. In addition, we experimented with the `solver=liblinear` rather than the default `solver=lbfgs` since according to [this website](https://holypython.com/log-reg/logistic-regression-optimization-parameters/) it is a more efficient solver with smaller datasets. Preliminary results show an improvement in our model accuracy using this solver vs "lbfgs".
 
 ## Database
 A database was created using SQL ... 
