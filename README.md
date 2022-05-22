@@ -30,6 +30,8 @@ Our group has communicated through a dedicated Slack channel as well as via Zoom
 
     *   Lastly, using the pandas `.get_dummies()` function our `Hall of Fame Class` column was encoded to separate the "inducted" and "not_inducted" players into separate columns since the "inducted" column will be our target for our machine learning model.  
 
+<img width="950" alt="Cleaned_data" src="https://user-images.githubusercontent.com/60076980/169674647-4cfff384-ab03-4f33-a389-6f226e77d5ce.png">
+
 ## Analysis Phase
 
 ## Machine Learning 
