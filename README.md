@@ -1,6 +1,6 @@
 # NBA Hall of Fame Predictions
 
-view our presentation [here] (https://docs.google.com/presentation/d/1KHQcw8sbCei26WB8A8FRXLCDnFFpWTpy9OIAjOntWtc/edit?usp=sharing)
+view our presentation [[here](url)]
 
 ## Selected topic
 NBA predictions based on players rookie year statistics.
