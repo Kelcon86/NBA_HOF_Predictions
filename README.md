@@ -1,10 +1,12 @@
 # NBA Hall of Fame Predictions
 
+view our presentation [here] (https://docs.google.com/presentation/d/1KHQcw8sbCei26WB8A8FRXLCDnFFpWTpy9OIAjOntWtc/edit?usp=sharing)
+
 ## Selected topic
-NBA Hall of Fame predictions based on players rookie year statistics
+NBA predictions based on players rookie year statistics.
 
 ## Reason why topic was selected
-After brainstorming we found that everyone in the group had an interest in sports. We knew there would be an abundance of data for professional sports leagues and decided to choose a topic involving the National Basketball Association (NBA). We were interested to see if there was any correlation between a players induction into the Hall of Fame and their rookie year statistics.
+After brainstorming we found that everyone in the group had an interest in sports. We knew there would be an abundance of data for professional sports leagues and decided to choose a topic involving the National Basketball Association (NBA). We initially were interested to see if there was any correlation between a players induction into the Hall of Fame and their rookie year statistics.
 
 ## Data Source Description
 We found several datasets that contained data for this topic, but ultimately chose to use NBA Rookies by Year_Hall of Fame Class.xlsx found on data.world. This file was then converted into a csv (nba_hof_rookies.csv).
@@ -26,7 +28,7 @@ Our group has communicated through a dedicated Slack channel as well as via Zoom
 
         ```rookies_df['3P%'] = rookies_df['3P%'].replace({'-':'0'})```
 
-    *   The next step was filling in any NaNs. The majority of NaNs were found in the `Hall of Fame Class` column since if a player had not been inducted, they would not have a class year assoicated with them. This was addressed by replacing and filling in these with the labels "Hall of Fame Member" and "Not Inducted".
+    *   The next step was filling in any NaNs. The majority of NaNs were found in the `Hall of Fame Class` column since if a player had not been inducted, they would not have a class year associated with them. This was addressed by replacing and filling in these with the labels "Hall of Fame Member" and "Not Inducted".
 
     *   Lastly, using the pandas `.get_dummies()` function our `Hall of Fame Class` column was encoded to separate the "inducted" and "not_inducted" players into separate columns since the "inducted" column will be our target for our machine learning model.  
 
@@ -39,7 +41,7 @@ Our group has communicated through a dedicated Slack channel as well as via Zoom
 ### Analysis Phase
 - Description of preliminary feature engineering and preliminary feature selection, including the decision-making process
 
-    *   Feature selection has been minimal at this point in our project, but at our instructor's advice we began by removing the `year_drafted` and `gp (games played)` columns to allow our machine learning model to focus purly on in-game statics like points, shots made, shot attempts, turnovers, etc.
+    *   Feature selection has been minimal at this point in our project, but at our instructor's advice we began by removing the `year_drafted` and `gp (games played)` columns to allow our machine learning model to focus purely on in-game statics like points, shots made, shot attempts, turnovers, etc.
 
 - Description of how data was split into training and testing sets
 
@@ -48,7 +50,7 @@ Our group has communicated through a dedicated Slack channel as well as via Zoom
 - Explanation of model choice, including limitations and benefits
 
 
-    *   The largest limitation of our dataset is that it is highly imbalanced. The basketball Hall of Fame, which has existed since the inagural class of 1959, has only, at most, **178** players. Our dataset, which has data going as far back as the draft class of 1980, has less than 40 Hall of Fame players out of the over 1500 players in the dataset. Because of this, we ran several imbalanced-learn oversampling methods following the train-test splitting.
+    *   The largest limitation of our dataset is that it is highly imbalanced. The basketball Hall of Fame, which has existed since the inaugural class of 1959, has only, at most, **178** players. Our dataset, which has data going as far back as the draft class of 1980, has less than 40 Hall of Fame players out of the over 1500 players in the dataset. Because of this, we ran several imbalanced-learn oversampling methods following the train-test splitting.
         *   The three oversampling methods we have used so far include:
             *   RandomOverSampler
             *   SMOTE
@@ -56,7 +58,7 @@ Our group has communicated through a dedicated Slack channel as well as via Zoom
     *   One of the benefits of our data is that it includes classifications, the "Hall of Fame Class" column, so we can use a supervised classification machine learning model. Specifically we are using the **scikit-learn logistic regression** method for our data fitting. In addition, we experimented with the `solver=liblinear` rather than the default `solver=lbfgs` since according to [this website](https://holypython.com/log-reg/logistic-regression-optimization-parameters/) it is a more efficient solver with smaller datasets. Preliminary results show an improvement in our model accuracy using this solver vs "lbfgs".
 
 ## Database
-A database was created using SQL ... 
+Using a combination of SQL, Pandas, and the Pgadmin tool multiple files were loaded, joined, and used as input to the analysis and modeling process. 
 
 <img width="561" alt="ERD_image" src="https://user-images.githubusercontent.com/60076980/169675214-90f44036-7bb6-4646-9384-ee35dcd8df4a.png">
 
