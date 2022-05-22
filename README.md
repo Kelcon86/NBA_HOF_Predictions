@@ -32,10 +32,11 @@ Our group has communicated through a dedicated Slack channel as well as via Zoom
 
 <img width="950" alt="Cleaned_data" src="https://user-images.githubusercontent.com/60076980/169674647-4cfff384-ab03-4f33-a389-6f226e77d5ce.png">
 
-## Analysis Phase
+
 
 ## Machine Learning 
 
+### Analysis Phase
 - Description of preliminary feature engineering and preliminary feature selection, including the decision-making process
 
     *   Feature selection has been minimal at this point in our project, but at our instructor's advice we began by removing the `year_drafted` and `gp (games played)` columns to allow our machine learning model to focus purly on in-game statics like points, shots made, shot attempts, turnovers, etc.
@@ -56,6 +57,8 @@ Our group has communicated through a dedicated Slack channel as well as via Zoom
 
 ## Database
 A database was created using SQL ... 
+
+<img width="561" alt="ERD_image" src="https://user-images.githubusercontent.com/60076980/169675214-90f44036-7bb6-4646-9384-ee35dcd8df4a.png">
 
 ## Dashboard
 We will be using Tableau to create a dashboard. 
