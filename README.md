@@ -22,7 +22,7 @@ Our group has communicated through a dedicated Slack channel as well as via Zoom
 ## Data Exploration Phase
 - Description of preliminary data preprocessing
 
-    *   The preliminary data preprocessing began prior to the data being loaded into the database. There were a few irregularities upon first inspection of the data. The first step was replacing any strings representing zeros with the actual integer 0. There were a few number of instantces in the `3P%` column where, rather than a 0, a hyphen was entered. This resulted in the column being labled as an `object` rather than a `float64` using the pandas `.dtypes`. This column would cause errors within our machine learning process. The hyphens were converted using the pandas `.to_numeric()` function with this code:
+    *   The preliminary data preprocessing began prior to the data being loaded into the database. There were a few irregularities upon first inspection of the data. The first step was replacing any strings representing zeros with the actual integer 0. There were a few number of instances in the `3P%` column where, rather than a 0, a hyphen was entered. This resulted in the column being labeled as an `object` rather than a `float64` using the pandas `.dtypes`. This column would cause errors within our machine learning process. The hyphens were converted using the pandas `.to_numeric()` function with this code:
 
         ```rookies_df['3P%'] = rookies_df['3P%'].replace({'-':'0'})```
 
@@ -74,8 +74,6 @@ The presentation outlines the project, including the following:
 - Description of the data exploration phase of the project
 - Description of the analysis phase of the project
 
-Slides
-- Presentations are drafted in Google Slides.
 
 - Description of the communication protocols
 - Outline of the project (this may include images, but they should be easy to follow and digest)
