@@ -1,12 +1,45 @@
 # NBA Hall of Fame Predictions
 
-View our presentation [here](https://docs.google.com/presentation/d/1KHQcw8sbCei26WB8A8FRXLCDnFFpWTpy9OIAjOntWtc/edit?usp=sharing).
-
 ## Selected topic
 NBA predictions based on players rookie year statistics.
 
 ## Reason why topic was selected
 After brainstorming we found that everyone in the group had an interest in sports. We knew there would be an abundance of data for professional sports leagues and decided to choose a topic involving the National Basketball Association (NBA). We initially were interested to see if there was any correlation between a players induction into the Hall of Fame and their rookie year statistics.
+
+## Outline
+
+- Overview
+    - Brainstormed topics
+    - Found common interest in sports
+    - Chose topic - NBA predictions based on players rookie year statistics
+    
+- Preprocessing
+    - Inspected data
+    - Replaced strings representing zeros with integer 0
+    - Converted hyphens using the pandas '.to_numeric()' function
+    - Filled in NaNs
+    - Used pandas '.get_dummies()' function to separate Hall of Fame class columns into "Inducted" and "Not Inducted"
+    
+- Database
+    - SQL
+    - Pandas
+    - PgAdmin
+    - AWS
+
+- Machine Learning
+    - Supervised classification machine learning model was used (scikit-learn logistic regression method for our data fitting)
+    - RandomOverSampler
+    - SMOTE
+    - SVM SMOTE
+
+- Visualizations
+    - Tableau dashboard
+    - Interactive elements include filters and dropdown lists
+
+View our Google Slides presentation [here](https://docs.google.com/presentation/d/1KHQcw8sbCei26WB8A8FRXLCDnFFpWTpy9OIAjOntWtc/edit?usp=sharing).
+Data file ......
+Database ......
+Machine Learning file .....
 
 ## Data Source Description
 We found several datasets that contained data for this topic, but ultimately chose to use NBA Rookies by Year_Hall of Fame Class.xlsx found on data.world. This file was then converted into a csv (nba_hof_rookies.csv).
@@ -34,8 +67,6 @@ Our group has communicated through a dedicated Slack channel as well as via Zoom
 
 <img width="950" alt="Cleaned_data" src="https://user-images.githubusercontent.com/60076980/169674647-4cfff384-ab03-4f33-a389-6f226e77d5ce.png">
 
-
-
 ## Machine Learning 
 
 ### Analysis Phase
@@ -58,31 +89,10 @@ Our group has communicated through a dedicated Slack channel as well as via Zoom
     *   One of the benefits of our data is that it includes classifications, the "Hall of Fame Class" column, so we can use a supervised classification machine learning model. Specifically we are using the **scikit-learn logistic regression** method for our data fitting. In addition, we experimented with the `solver=liblinear` rather than the default `solver=lbfgs` since according to [this website](https://holypython.com/log-reg/logistic-regression-optimization-parameters/) it is a more efficient solver with smaller datasets. Preliminary results show an improvement in our model accuracy using this solver vs "lbfgs".
 
 ## Database
-Using a combination of SQL, Pandas, and the Pgadmin tool multiple files were loaded, joined, and used as input to the analysis and modeling process. 
+Using a combination of SQL, Pandas, Pgadmin and AWS multiple files were loaded, joined, and used as input to the analysis and modeling process. 
 
 <img width="561" alt="ERD_image" src="https://user-images.githubusercontent.com/60076980/169675214-90f44036-7bb6-4646-9384-ee35dcd8df4a.png">
 
 ## Dashboard
-We will be using Tableau to create a dashboard. 
+We will be using Tableau to create a dashboard. Various types of charts will be used as well as interactive features including filters and dropdown lists.
 
-
-Segment 2 Rubric
-The presentation outlines the project, including the following:
-
-- Selected topic
-- Reason topic was selected
-- Description of the source of data
-- Questions the team hopes to answer with the data
-- Description of the data exploration phase of the project
-- Description of the analysis phase of the project
-
-
-- Description of the communication protocols
-- Outline of the project (this may include images, but they should be easy to follow and digest)
-
-Dashboard (15 points)
-- A blueprint for the dashboard is created and includes all of the following:
-
-- Storyboard on a Google Slide(s)
-- Description of the tool(s) that will be used to create the final dashboard
-- Description of interactive element(s)
