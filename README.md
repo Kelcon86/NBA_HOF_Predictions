@@ -74,11 +74,6 @@ Our group has communicated through a dedicated Slack channel as well as via Zoom
 
     *   Feature selection has been minimal at this point in our project, but at our instructor's advice we began by removing the `year_drafted` and `gp (games played)` columns to allow our machine learning model to focus purely on in-game statics like points, shots made, shot attempts, turnovers, etc.
 
-<<<<<<< HEAD
-    *   
-
-=======
->>>>>>> 67ffdd50971881d9875caef225b65f650a605c84
 - Description of how data was split into training and testing sets
 
     *   The data was shuffled and split into the training and test sets using the default parameters, which is `train_size = 0.25` and `test_size = 0.75` per [the sklearn documentation](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html).
