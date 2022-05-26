@@ -95,3 +95,4 @@ Using a combination of SQL, Pandas, Pgadmin and AWS multiple files were loaded, 
 
 ## Dashboard
 We will be using Tableau to create a dashboard. Various types of charts will be used as well as interactive features including filters and dropdown lists.
+
