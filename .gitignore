@@ -1,2 +1,8 @@
-# add config gile
+# ignore config file
 config.py
+
+# ignore __pycache__
+__pycache__
+
+# ignore .ipynb_checkpoints
+.ipynb_checkpoints
