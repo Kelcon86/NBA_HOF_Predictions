@@ -80,9 +80,31 @@ Our group has communicated through a dedicated Slack channel as well as via Zoom
 
 - Explanation of model choice, including limitations and benefits
 
+### Machine Learning Models Table
 
-    *   The largest limitation of our dataset is that it is highly imbalanced. The basketball Hall of Fame, which has existed since the inaugural class of 1959, has only, at most, **178** players. Our dataset, which has data going as far back as the draft class of 1980, has less than 40 Hall of Fame players out of the over 1500 players in the dataset. Because of this, we ran several imbalanced-learn oversampling methods following the train-test splitting.
-        *   The three oversampling methods we have used so far include:
+| **Model**           | **Oversampler**   | **Results** |
+|---------------------|-------------------|-------------|
+| Logistic Regression | RandomOverSampler | ![](machine_learning/img/ros_results.png) |
+| Logistic Regression | SMOTE             | ![](machine_learning/img/smote_results.png) |
+| Logistic Regression | SVM SMOTE         | ![](machine_learning/img/svmsmote_results.png) |
+| Basic Neural Net    | n/a               | ![](machine_learning/img/bnn_results.png) |
+| Deep Learning       | n/a               | ![](machine_learning/img/dl_results.png) |
+
+### Optimization Attempts Table
+
+|                    **Dropped Features**                    |                 **Results**                |                                                             **Reason**                                                             |
+|:----------------------------------------------------------:|:------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------:|
+|           Baseline: All Performance Features Kept          | ![](machine_learning/img/opt_baseline.png) |                                                                 n/a                                                                |
+| Keeping Shots Made Only Drop: FGA, FG%, 3PA, 3P%, FTA, FT% |     ![](machine_learning/img/opt_1.png)    |      Shots made, attempts, and percentage are all related to one another.  Keeping only shots made could help improve resutls.     |
+|     Keeping Shots Made and Attempt Drop: FG%, 3P%, FT%     |     ![](machine_learning/img/opt_2.png)    |          Since keeping only shots made did not help improve results,  only dropping percentage to see if results improve.          |
+|             Added Back 'GP' and 'MIN' Features             |     ![](machine_learning/img/opt_3.png)    | These features were dropped originally because they were not performance stats.  Adding these back to see if they improve results. |
+|           Keeping Total Rebounds Drop: OREB, DREB          |     ![](machine_learning/img/opt_4.png)    |                        REB is the total of OREB and DREB added,  since we the total they may not be needed.                        |
+
+
+#### Benefits and Limitations
+
+*   The largest limitation of our dataset is that it is highly imbalanced. The basketball Hall of Fame, which has existed since the inaugural class of 1959, has only, at most, **178** players. Our dataset, which has data going as far back as the draft class of 1980, has less than 40 Hall of Fame players out of the over 1500 players in the dataset. Because of this, we ran several imbalanced-learn oversampling methods following the train-test splitting.
+    *   The three oversampling methods we have used so far include:
             *   RandomOverSampler
             *   SMOTE
             *   SVM SMOTE
