@@ -94,11 +94,11 @@ Our group has communicated through a dedicated Slack channel as well as via Zoom
 
 |                    **Dropped Features**                    |                 **Results**                |                                                             **Reason**                                                             |
 |:----------------------------------------------------------:|:------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------:|
-|           Baseline: All Performance Features Kept          | ![](machine_learning/img/opt_baseline.png) |                                                                 n/a                                                                |
-| Keeping Shots Made Only Drop: FGA, FG%, 3PA, 3P%, FTA, FT% |     ![](machine_learning/img/opt_1.png)    |      Shots made, attempts, and percentage are all related to one another.  Keeping only shots made could help improve resutls.     |
-|     Keeping Shots Made and Attempt Drop: FG%, 3P%, FT%     |     ![](machine_learning/img/opt_2.png)    |          Since keeping only shots made did not help improve results,  only dropping percentage to see if results improve.          |
-|             Added Back 'GP' and 'MIN' Features             |     ![](machine_learning/img/opt_3.png)    | These features were dropped originally because they were not performance stats.  Adding these back to see if they improve results. |
-|           Keeping Total Rebounds Drop: OREB, DREB          |     ![](machine_learning/img/opt_4.png)    |                        REB is the total of OREB and DREB added,  since we the total they may not be needed.                        |
+|           Baseline: All Performance Features Kept.          | ![](machine_learning/img/opt_baseline.png) |                                                                 n/a                                                                |
+| Keeping Shots Made Only. Drop: FGA, FG%, 3PA, 3P%, FTA, FT%. |     ![](machine_learning/img/opt_1.png)    |      Shots made, attempts, and percentage are all related to one another.  Keeping only shots made could help improve resutls.     |
+|     Keeping Shots Made and Attempts. Drop: FG%, 3P%, FT%.     |     ![](machine_learning/img/opt_2.png)    |          Since keeping only shots made did not help improve results,  only dropping percentage to see if results improve.          |
+|             Added Back 'GP' and 'MIN' Features.             |     ![](machine_learning/img/opt_3.png)    | These features were dropped originally because they were not performance stats.  Adding these back to see if they improve results. |
+|           Keeping Total Rebounds Drop: OREB, DREB.          |     ![](machine_learning/img/opt_4.png)    |                        REB is the total of OREB and DREB added,  since we the total they may not be needed.                        |
 
 
 #### Benefits and Limitations
