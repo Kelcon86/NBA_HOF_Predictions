@@ -60,13 +60,17 @@ Our group has communicated through a dedicated Slack channel as well as via Zoom
 ## Data Exploration Phase
 - Description of preliminary data preprocessing
 
-    *   The preliminary data preprocessing began prior to the data being loaded into the database. There were a few irregularities upon first inspection of the data. The first step was replacing any strings representing zeros with the actual integer 0. There were a few number of instances in the `3P%` column where, rather than a 0, a hyphen was entered. This resulted in the column being labeled as an `object` rather than a `float64` using the pandas `.dtypes`. This column would cause errors within our machine learning process. The hyphens were converted using the pandas `.to_numeric()` function with this code:
+    *   There were a few irregularities upon first inspection of the data. The first step was replacing any strings representing zeros with the actual integer 0. For example, there were a few number of instances in the `3P%` column withihn the NBA_HOF_Rookies.csv file where, rather than a 0, a hyphen was entered. This resulted in the column being labeled as an `object` rather than a `float64` using the pandas `.dtypes`. This column would cause errors within our machine learning process. The hyphens were converted using the pandas `.to_numeric()` function with this code:
 
         ```rookies_df['3P%'] = rookies_df['3P%'].replace({'-':'0'})```
 
-    *   The next step was filling in any NaNs. The majority of NaNs were found in the `Hall of Fame Class` column since if a player had not been inducted, they would not have a class year associated with them. This was addressed by replacing and filling in these with the labels "Hall of Fame Member" and "Not Inducted".
+    *   The next step was filling in any NaNs. The majority of NaNs were found in the `Hall of Fame Class` and `Pick` columns since if a player had not been inducted or drafted, they would not have a number those cells. This was addressed by replacing and filling in these with the labels "Hall of Fame Member" and "Not Inducted" for the Hall of Fame column and adding a 0 to the Pick column for each respective player.
 
     *   Lastly, using the pandas `.get_dummies()` function our `Hall of Fame Class` column was encoded to separate the "inducted" and "not_inducted" players into separate columns since the "inducted" column will be our target for our machine learning model.  
+
+To see specificlly how all of our datasets were cleaned and prepared for merging please refer to the [DataPreparation folder](https://github.com/Kelcon86/NBA_HOF_Predictions/tree/main/DataPreparation/DataCleaningNotebooks) in the repository.
+
+To see all SQL statements and our Database ERD (image also below) please refer to the [DB_Documentation folder](https://github.com/Kelcon86/NBA_HOF_Predictions/tree/main/DB_Documentation) in the repository.
 
 <img width="950" alt="Cleaned_data" src="https://user-images.githubusercontent.com/60076980/169674647-4cfff384-ab03-4f33-a389-6f226e77d5ce.png">
 
@@ -75,8 +79,8 @@ Our group has communicated through a dedicated Slack channel as well as via Zoom
 ### Analysis Phase
 - Description of preliminary feature engineering and preliminary feature selection, including the decision-making process
 
-    *   Feature selection has been minimal at this point in our project, but at our instructor's advice we began by removing the `year_drafted` and `gp (games played)` columns to allow our machine learning model to focus purely on in-game statics like points, shots made, shot attempts, turnovers, etc.
-
+    *   Feature selection for this project was very straight forward, as most of the feature were related to in-game statistics like points, shots made, shot attempts, turnovers, etc. These features were all kept as removing them had a negative impact on our machine learning model (see optimization table below). There were several non-performance related features like number of games played, average minutes played per game, and draft year, etc. These features were dropped since they did not directly relate to a player’s performance and would likely not help with the machine learning model.
+    *   
 - Description of how data was split into training and testing sets
 
     *   The data was shuffled and split into the training and test sets using the default parameters, which is `train_size = 0.25` and `test_size = 0.75` per [the sklearn documentation](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html).
@@ -84,6 +88,9 @@ Our group has communicated through a dedicated Slack channel as well as via Zoom
 - Explanation of model choice, including limitations and benefits
 
 ### Machine Learning Models Table
+
+This table shows each type of machine learning model that we used and their results, our best performing model and the one we selected to use was Logistic Regression using the SVM SMOTE over sampler. Oversampling was needed due to the highly imbalanced nature of our dataset. This model had both the highest training accuracy and lowest number of false positives. 
+
 
 | **Model**           | **Oversampler**   | **Results** |
 |---------------------|-------------------|-------------|
@@ -93,7 +100,11 @@ Our group has communicated through a dedicated Slack channel as well as via Zoom
 | Basic Neural Net    | n/a               | ![](machine_learning/img/bnn_results.png) |
 | Deep Learning       | n/a               | ![](machine_learning/img/dl_results.png) |
 
+To see the file used to run all these models, please refer to the [ml_model_experiments.ipynb file](https://github.com/Kelcon86/NBA_HOF_Predictions/blob/main/machine_learning/ml_model_experiments.ipynb) in the [machine_learning folder](https://github.com/Kelcon86/NBA_HOF_Predictions/tree/main/machine_learning) in our repository.
+
 ### Optimization Attempts Table
+
+This table shows the number of different optimization attempts made pertaining to feature selection. Each attempt experimented with dropping and keeping combinations of features to help the machine learning model perform better overall. Per the results seen in the table, our baseline feature selection (keeping all performance stats) resulted in the best outcome.
 
 |                    **Dropped Features**                    |                 **Results**                |                                                             **Reason**                                                             |
 |:----------------------------------------------------------:|:------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------:|
@@ -103,6 +114,7 @@ Our group has communicated through a dedicated Slack channel as well as via Zoom
 |             Added Back 'GP' and 'MIN' Features.             |     ![](machine_learning/img/opt_3.png)    | These features were dropped originally because they were not performance stats.  Adding these back to see if they improve results. |
 |           Keeping Total Rebounds Drop: OREB, DREB.          |     ![](machine_learning/img/opt_4.png)    |                        REB is the total of OREB and DREB added,  since we the total they may not be needed.                        |
 
+To see the file used to run all these optimization attempts, please refer to the [ml_model_optimizations.ipynb](https://github.com/Kelcon86/NBA_HOF_Predictions/blob/main/machine_learning/ml_model_optimizations.ipynb) in the [machine_learning folder](https://github.com/Kelcon86/NBA_HOF_Predictions/tree/main/machine_learning) in our repository.
 
 #### Benefits and Limitations
 
