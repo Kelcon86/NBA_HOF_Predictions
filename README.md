@@ -118,12 +118,11 @@ To see the file used to run all these optimization attempts, please refer to the
 
 #### Benefits and Limitations
 
-*   The largest limitation of our dataset is that it is highly imbalanced. The basketball Hall of Fame, which has existed since the inaugural class of 1959, has only, at most, **178** players. Our dataset, which has data going as far back as the draft class of 1980, has less than 40 Hall of Fame players out of the over 1500 players in the dataset. Because of this, we ran several imbalanced-learn oversampling methods following the train-test splitting.
-    *   The three oversampling methods we have used so far include:
-            *   RandomOverSampler
-            *   SMOTE
-            *   SVM SMOTE
-    *   One of the benefits of our data is that it includes classifications, the "Hall of Fame Class" column, so we can use a supervised classification machine learning model. Specifically we are using the **scikit-learn logistic regression** method for our data fitting. In addition, we experimented with the `solver=liblinear` rather than the default `solver=lbfgs` since according to [this website](https://holypython.com/log-reg/logistic-regression-optimization-parameters/) it is a more efficient solver with smaller datasets. Preliminary results show an improvement in our model accuracy using this solver vs "lbfgs".
+*   The largest limitation of our dataset is that it is highly imbalanced. The basketball Hall of Fame, which has existed since the inaugural class of 1959, has only, at most, **178** players. Our dataset, which has data going as far back as the draft class of 1980, has less than 40 Hall of Fame players out of the over 1200 players in the dataset. Because of this, we ran several imbalanced-learn oversampling methods. Please refer to the **Machine Learning Models Table** above to see the results.
+
+*   Our model choice (Logistic Regression with SVM SMOTE oversampling) has one limitation that was shown in the results above in the Machine Learning Table. There were two Hall of Fame players that were misidentified as not Hall of Fame players (false negatives) where the SMOTE model only had one such player. In a dataset as imbalanced as our even just one player misidentified can have a significant impact. However, due to the much lower number of false positives from the SVM SMOTE model compared to the others, the SVM SMOTE oversamplers still came out as the best model.
+
+*   One of the benefits of our data is that it includes classifications, the "Hall of Fame Class" column, so we can use a supervised classification machine learning model. Specifically, we are using the **scikit-learn logistic regression** method for our data fitting. In addition, we are using the solver `liblinear` rather than the default solver since according to [holypython.com](https://holypython.com/log-reg/logistic-regression-optimization-parameters/) it is a more efficient solver with smaller and imbalanced datasets.
 
 ## Database
 Using a combination of SQL, Pandas, Pgadmin and AWS multiple files were loaded, joined, and used as input to the analysis and modeling process. 
