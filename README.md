@@ -1,17 +1,17 @@
 # NBA Hall of Fame Predictions
 
 ## Selected topic
-NBA predictions based on players rookie year statistics.
+Predicting if an National Basketball Association (NBA) player will be inducted into the Hall of Fame based only on their rookie year statistics.
 
 ## Reason why topic was selected
-After brainstorming we found that everyone in the group had an interest in sports. We knew there would be an abundance of data for professional sports leagues and decided to choose a topic involving the National Basketball Association (NBA). We initially were interested to see if there was any correlation between a players induction into the Hall of Fame and their rookie year statistics.
+After brainstorming we found that everyone in the group had an interest in sports. We knew there would be an abundance of data for professional sports leagues and decided to choose a topic involving the NBA. We initially were interested to see if there was any correlation between a player’s induction into the Hall of Fame and their rookie year statistics.
 
 ## Outline
 
 - Overview
     - Brainstormed topics
     - Found common interest in sports
-    - Chose topic - NBA predictions based on players rookie year statistics
+    - Chose topic - NBA HAll of Fame predictions based on players rookie year statistics
     
 - Preprocessing
     - Inspected data
@@ -36,22 +36,21 @@ After brainstorming we found that everyone in the group had an interest in sport
     - Tableau dashboard
     - Interactive elements include filters and dropdown lists
 
-- View our Google Slides presentation [here](https://docs.google.com/presentation/d/1KHQcw8sbCei26WB8A8FRXLCDnFFpWTpy9OIAjOntWtc/edit?usp=sharing).
+- View our [Google Slides presentation here](https://docs.google.com/presentation/d/1KHQcw8sbCei26WB8A8FRXLCDnFFpWTpy9OIAjOntWtc/edit?usp=sharing).
 
-- View our Data files in the DataPreperation folder above
+- View our Data files in the [DataPreperation folder]( https://github.com/Kelcon86/NBA_HOF_Predictions/tree/main/DataPreparation) or find it above.
 
-- View our Database files in the DB_Documentation folder above
+- View our Database files in the [DB_Documentation folder](https://github.com/Kelcon86/NBA_HOF_Predictions/tree/main/DB_Documentation) or find it above.
 
-- View our machine learning files in the machine_learning folder above
+- View our machine learning files in the [machine_learning folder]( https://github.com/Kelcon86/NBA_HOF_Predictions/tree/main/machine_learning) or find it above.
 
 ## Data Source Description
-We found several datasets that contained data for this topic, but ultimately chose to use NBA Rookies by Year_Hall of Fame Class.xlsx found on data.world. This file was then converted into a csv (nba_hof_rookies.csv).
+We found several datasets that contained data for this topic, but ultimately chose to use NBA Rookies by Year_Hall of Fame Class.xlsx found on [data.world]( https://data.world/gmoney/nba-rookies-by-min-1980-2016). This file was then converted into a csv (nba_hof_rookies.csv).
 
 <img width="1004" alt="Data_image" src="https://user-images.githubusercontent.com/60076980/167962935-2c5b4c90-f5e9-4a8e-8895-c0e7bf329876.png">
 
 ## Questions we hope to answer with the data
 - Can we accurately predict an NBA players induction into the Hall of Fame based on their statistics from their rookie season
-- Were rookie players in a certain position more likely to be inducted into the Hall of Fame?
 - Was there a correlation between rookie year statistics and length of career for players inducted into the Hall of Fame?
 
 ## Description of the communication protocols
@@ -112,7 +111,7 @@ This table shows the number of different optimization attempts made pertaining t
 | Keeping Shots Made Only. Drop: FGA, FG%, 3PA, 3P%, FTA, FT%. |     ![](machine_learning/img/opt_1.png)    |      Shots made, attempts, and percentage are all related to one another.  Keeping only shots made could help improve resutls.     |
 |     Keeping Shots Made and Attempts. Drop: FG%, 3P%, FT%.     |     ![](machine_learning/img/opt_2.png)    |          Since keeping only shots made did not help improve results,  only dropping percentage to see if results improve.          |
 |             Added Back 'GP' and 'MIN' Features.             |     ![](machine_learning/img/opt_3.png)    | These features were dropped originally because they were not performance stats.  Adding these back to see if they improve results. |
-|           Keeping Total Rebounds Drop: OREB, DREB.          |     ![](machine_learning/img/opt_4.png)    |                        REB is the total of OREB and DREB added,  since we the total they may not be needed.                        |
+|           Keeping Total Rebounds Drop: OREB, DREB.          |     ![](machine_learning/img/opt_4.png)    |                        REB is the sum of OREB and DREB,  since we have the REB feature they may not be needed.                        |
 
 To see the file used to run all these optimization attempts, please refer to the [ml_model_optimizations.ipynb](https://github.com/Kelcon86/NBA_HOF_Predictions/blob/main/machine_learning/ml_model_optimizations.ipynb) in the [machine_learning folder](https://github.com/Kelcon86/NBA_HOF_Predictions/tree/main/machine_learning) in our repository.
 
