@@ -36,10 +36,13 @@ After brainstorming we found that everyone in the group had an interest in sport
     - Tableau dashboard
     - Interactive elements include filters and dropdown lists
 
-View our Google Slides presentation [here](https://docs.google.com/presentation/d/1KHQcw8sbCei26WB8A8FRXLCDnFFpWTpy9OIAjOntWtc/edit?usp=sharing).
-Data file ......
-Database ......
-Machine Learning file .....
+- View our Google Slides presentation [here](https://docs.google.com/presentation/d/1KHQcw8sbCei26WB8A8FRXLCDnFFpWTpy9OIAjOntWtc/edit?usp=sharing).
+
+- View our Data files in the DataPreperation folder above
+
+- View our Database files in the DB_Documentation folder above
+
+- View our machine learning files in the machine_learning folder above
 
 ## Data Source Description
 We found several datasets that contained data for this topic, but ultimately chose to use NBA Rookies by Year_Hall of Fame Class.xlsx found on data.world. This file was then converted into a csv (nba_hof_rookies.csv).
@@ -116,5 +119,5 @@ Using a combination of SQL, Pandas, Pgadmin and AWS multiple files were loaded, 
 <img width="561" alt="ERD_image" src="https://user-images.githubusercontent.com/60076980/169675214-90f44036-7bb6-4646-9384-ee35dcd8df4a.png">
 
 ## Dashboard
-We will be using Tableau to create a dashboard. Various types of charts will be used as well as interactive features including filters and dropdown lists.
+We will be using Tableau to create a dashboard. Various types of charts as well as interactive features including filters and dropdown lists will be used to visualize the data from our database and machine learning models. 
 
