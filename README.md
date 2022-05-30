@@ -34,8 +34,10 @@ After brainstorming we found that everyone in the group had an interest in sport
 
 - Visualizations
     - Tableau dashboard
-    - Interactive elements include filters and dropdown lists
-
+    - Interactive charts
+    - Easy to read graphs that higlight every player from 1980 to 2008
+    - Tableau stories
+   
 - View our [Google Slides presentation here](https://docs.google.com/presentation/d/1KHQcw8sbCei26WB8A8FRXLCDnFFpWTpy9OIAjOntWtc/edit?usp=sharing).
 
 - View our Data files in the [DataPreperation folder]( https://github.com/Kelcon86/NBA_HOF_Predictions/tree/main/DataPreparation) or find it above.
@@ -129,5 +131,13 @@ Using a combination of SQL, Pandas, Pgadmin and AWS multiple files were loaded, 
 <img width="561" alt="ERD_image" src="https://user-images.githubusercontent.com/60076980/169675214-90f44036-7bb6-4646-9384-ee35dcd8df4a.png">
 
 ## Dashboard
-We will be using Tableau to create a dashboard. Various types of charts as well as interactive features including filters and dropdown lists will be used to visualize the data from our database and machine learning models. 
+Using Tableau we are able create a story that helps visualize our project. Threw an Interactive Dashboard with a moveable quadrant graph that highlights every players Points Per Game(PPG) And Minutes played(MP) in rookie season.
+   
+   <img width="856" alt="AVG MIN VS POINTS(Interactive)" src="https://user-images.githubusercontent.com/95835840/170899338-bb8f2160-c4c2-4fcf-8cfe-d311b446fc3d.png">
+   
+Along with an efficiency line Graph that highlights every player from 1980 to 2008 which you can filter between NON HOFS and HOFS. We also have a bar graph detailing how many HOFs were intrudeced per year.
+
+<img width="1122" alt="MOST EFFICIENT PLAYERS (ROOKIES SEASON)" src="https://user-images.githubusercontent.com/95835840/170900857-f3068b74-ace4-4b41-9c59-daec6939dd7e.png">
+
+
 
