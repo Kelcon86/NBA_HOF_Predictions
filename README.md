@@ -131,11 +131,13 @@ Using a combination of SQL, Pandas, Pgadmin and AWS multiple files were loaded, 
 <img width="561" alt="ERD_image" src="https://user-images.githubusercontent.com/60076980/169675214-90f44036-7bb6-4646-9384-ee35dcd8df4a.png">
 
 ## Dashboard
-Using Tableau we are able create a story that helps visualize our project. Threw an Interactive Dashboard with a moveable quadrant graph that highlights every players Points Per Game(PPG) And Minutes played(MP) in rookie season.
+Using Tableau we are able create a story that helps visualize our project using several charts and interactive elements. 
+
+One of our interactive elements is a moveable quadrant graph that highlights every player's Points Per Game(PPG) And Minutes Played(MP) in their rookie season.
    
-   <img width="856" alt="AVG MIN VS POINTS(Interactive)" src="https://user-images.githubusercontent.com/95835840/170899338-bb8f2160-c4c2-4fcf-8cfe-d311b446fc3d.png">
+<img width="856" alt="AVG MIN VS POINTS(Interactive)" src="https://user-images.githubusercontent.com/95835840/170899338-bb8f2160-c4c2-4fcf-8cfe-d311b446fc3d.png">
    
-Along with an efficiency line Graph that highlights every player from 1980 to 2008 which you can filter between NON HOFS and HOFS. We also have a bar graph detailing how many HOFs were intrudeced per year.
+Another interactive element involves an Efficiency (EFF) line graph that highlights every player from 1980 to 2008 which can be filter between players that are and are not in the Hall of Fame.
 
 <img width="1122" alt="MOST EFFICIENT PLAYERS (ROOKIES SEASON)" src="https://user-images.githubusercontent.com/95835840/170900857-f3068b74-ace4-4b41-9c59-daec6939dd7e.png">
 
