@@ -1,0 +1,62 @@
+career_duration
+- 
+index   int PK
+GUID varchar FK >- rookies_df.GUID
+NAME_FIRST_LAST varchar
+NAME_LAST_FIRST varchar
+FROM_YEAR   date
+TO_YEAR date
+
+draft_position
+-
+index   int PK
+GUID varchar FK
+Player varchar
+Year int
+Pick int
+
+rookies_df
+-
+index   int PK
+GUID varchar FK
+Name varchar
+HallofFameClass  varchar
+YearDrafted int
+GP  int
+MIN numeric
+PTS numeric
+FGM numeric
+FGA numeric
+FG% numeric
+3PMade numeric
+3PA numeric
+3P% numeric
+FTM numeric
+FTA numeric
+FT% numeric
+OREB    numeric
+DREB    numeric
+REB numeric
+AST numeric
+STL numeric
+BLK numeric
+TOV numeric
+EFF numeric
+
+basketball_db_Draft 
+- 
+GUID varchar FK >- draft_position.GUID
+idPlayer int PK
+namePlayer varchar
+yearDraft int
+numberRound int
+numberPickOverall int
+ 
+basketball_db_Player_Attributes 
+- 
+ID int PK
+GUID varchar FK >- basketball_db_Draft.GUID
+BIRTHDATE date
+POSITION varchar
+AGE_ROOKIE_SEASON int
+Draft_Decade varchar
