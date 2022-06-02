@@ -55,9 +55,6 @@ We found several datasets that contained data for this topic, but ultimately cho
 - Can we accurately predict an NBA players induction into the Hall of Fame based on their statistics from their rookie season
 - Was there a correlation between rookie year statistics and length of career for players inducted into the Hall of Fame?
 
-## Description of the communication protocols
-Our group has communicated through a dedicated Slack channel as well as via Zoom.
-
 ## Data Exploration Phase
 - Description of preliminary data preprocessing
 
