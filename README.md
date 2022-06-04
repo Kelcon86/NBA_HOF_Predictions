@@ -72,6 +72,16 @@ To see all SQL statements and our Database ERD (image also below) please refer t
 
 <img width="950" alt="Cleaned_data" src="https://user-images.githubusercontent.com/60076980/169674647-4cfff384-ab03-4f33-a389-6f226e77d5ce.png">
 
+## Technologies, languages, tools, and algorithms used throughout the project 
+- Python
+- Pandas
+- SciKit
+- PostgreSQL
+- SQLAlchemy
+- AWS
+- PgAdmin
+- Tableau
+
 ## Machine Learning 
 
 ### Analysis Phase
