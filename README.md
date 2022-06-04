@@ -1,10 +1,10 @@
 # NBA Hall of Fame Predictions
 
 ## Selected topic
-Predicting if an National Basketball Association (NBA) player will be inducted into the Hall of Fame based only on their rookie year statistics.
+Predicting if a National Basketball Association (NBA) player will be inducted into the Hall of Fame based only on their rookie year statistics.
 
 ## Reason why topic was selected
-After brainstorming we found that everyone in the group had an interest in sports. We knew there would be an abundance of data for professional sports leagues and decided to choose a topic involving the NBA. We initially were interested to see if there was any correlation between a player’s induction into the Hall of Fame and their rookie year statistics.
+After brainstorming we found that everyone in the group had an interest in sports. We knew there would be an abundance of data for professional sports leagues and decided to choose a topic involving the NBA. We were interested to see if there was any correlation between a player’s induction into the Hall of Fame and their rookie year statistics.
 
 ## Outline
 
@@ -52,7 +52,7 @@ We found several datasets that contained data for this topic, but ultimately cho
 <img width="1004" alt="Data_image" src="https://user-images.githubusercontent.com/60076980/167962935-2c5b4c90-f5e9-4a8e-8895-c0e7bf329876.png">
 
 ## Questions we hope to answer with the data
-- Can we accurately predict an NBA players induction into the Hall of Fame based on their statistics from their rookie season
+- Can we accurately predict an NBA players induction into the Hall of Fame based on their statistics from their rookie season?
 - Was there a correlation between rookie year statistics and length of career for players inducted into the Hall of Fame?
 
 ## Data Exploration Phase
@@ -92,8 +92,6 @@ To see all SQL statements and our Database ERD (image also below) please refer t
 - Description of how data was split into training and testing sets
 
     *   The data was shuffled and split into the training and test sets using the default parameters, which is `train_size = 0.25` and `test_size = 0.75` per [the sklearn documentation](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html).
-
-- Explanation of model choice, including limitations and benefits
 
 ### Machine Learning Models Table
 
@@ -135,18 +133,13 @@ To see the file used to run all these optimization attempts, please refer to the
 ## Database
 Using a combination of SQL, Pandas, Pgadmin and AWS multiple files were loaded, joined, and used as input to the analysis and modeling process. 
 
-<img width="561" alt="ERD_image" src="https://user-images.githubusercontent.com/60076980/169675214-90f44036-7bb6-4646-9384-ee35dcd8df4a.png">
+<img width="585" alt="ERD2" src="https://user-images.githubusercontent.com/60076980/172018262-64936ed8-de52-4f4d-9382-39cc9cafd55d.png">
 
 ## Dashboard
 Using Tableau we are able create a story that helps visualize our project using several charts and interactive elements. 
 
 One of our interactive elements is a moveable quadrant graph that highlights every player's Points Per Game(PPG) And Minutes Played(MP) in their rookie season.
    
-<img width="856" alt="AVG MIN VS POINTS(Interactive)" src="https://user-images.githubusercontent.com/95835840/170899338-bb8f2160-c4c2-4fcf-8cfe-d311b446fc3d.png">
-   
-Another interactive element involves an Efficiency (EFF) line graph that highlights every player from 1980 to 2008 which can be filter between players that are and are not in the Hall of Fame.
-
-<img width="1122" alt="MOST EFFICIENT PLAYERS (ROOKIES SEASON)" src="https://user-images.githubusercontent.com/95835840/170900857-f3068b74-ace4-4b41-9c59-daec6939dd7e.png">
-
+<img width="760" alt="TableauStory3" src="https://user-images.githubusercontent.com/60076980/172018401-79f305af-9185-42ff-aa23-e56b4a7e6f4d.png">
 
 
