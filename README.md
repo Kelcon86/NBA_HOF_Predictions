@@ -113,7 +113,7 @@ This table shows each type of machine learning method that we used and the resul
 
 *   To see the files used to run all these experiments, please refer to the [experiments folder](https://github.com/Kelcon86/NBA_HOF_Predictions/tree/main/machine_learning/experiments) in our repository.
 
-Based on these results, the best perfoming model was Logistic Regression using sklearn's RandomOverSampler. This is because of the model's high train and test accuracy, low number of false negatives, and best F1 score. This model was used for optimization and deployment
+Based on these results, the best performing model was Logistic Regression using sklearn's RandomOverSampler. This is because of the model's high train and test accuracy, low number of false negatives, and best F1 score. This model was used for optimization and deployment
 
 ### **Optimization Attempts Table**
 
@@ -150,18 +150,18 @@ Upon joining the data and running all the experimental models again to look for 
 
 Because the best performing model had changed, all optimization were run again and this new final version of the model was used for deployment on the dataset.
 
-### **Model Accuray**
+### **Model Accuracy**
 
-*   Training Accuray - 88.27%
-*   Testing Accuray - 85.08%
-*   Deployment Accuary - 88.66%
+*   Training Accuracy - 88.27%
+*   Testing Accuracy - 85.08%
+*   Deployment Accuracy - 88.66%
 
 ![](machine_learning/img/CM/cm_sql_query.png)
     
 *   Deployment accuracy calculated by taking the number of correct predictions (True Positives + True Negatives) over total rows (1217)
 
 ## **Database**
-Using a combination of SQL, Pandas, Pgadmin and AWS multiple files were loaded, joined, and used as input to the analysis and modeling process. 
+Using a combination of SQL, Pandas, PgAdmin and AWS multiple files were loaded, joined, and used as input to the analysis and modeling process. 
 
 <img width="585" alt="ERD2" src="https://user-images.githubusercontent.com/60076980/172018262-64936ed8-de52-4f4d-9382-39cc9cafd55d.png">
 
