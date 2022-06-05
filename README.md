@@ -144,9 +144,9 @@ Based on these results, the baseline features (draft and all performance stats) 
 
 Between segments 2 and 3 was when we found the dataset that included draft information for the players that matched included all players from our dataset being used for training/testing. A decision was made by our group to include this data since, in theory, it would be a very strong indication of a player's anticipated performing in their rookie season, and therefor aid our model and its predictions. 
 
-Upon joining the data and running all the experimental models again to look for differences in performance. We came to two important conclusions. 
+Upon joining the data and running all the experimental models again to look for differences in performance we came to two important conclusions:
 *   First, that including the data did in fact improve the performance of our models, justifying its inclusion. 
-*   Second, our best performing model had changed from Logistic Regression with the SVMSMOTE over sampler to Logistic Regression with the RandomOverSampler over sampler.
+*   Second, our best performing model had changed from Logistic Regression with the SVMSMOTE over sampler to Logistic Regression with the RandomOverSampler over sampler, hence the change described above.
 
 Because the best performing model had changed, all optimization were run again and this new final version of the model was used for deployment on the dataset.
 
