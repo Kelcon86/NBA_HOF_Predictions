@@ -47,9 +47,13 @@ After brainstorming we found that everyone in the group had an interest in sport
 - View our machine learning files in the [machine_learning folder]( https://github.com/Kelcon86/NBA_HOF_Predictions/tree/main/machine_learning) or find it above.
 
 ## **Data Source Description**
-We found several datasets that contained data for this topic, but ultimately chose to use NBA Rookies by Year_Hall of Fame Class.xlsx found on [data.world]( https://data.world/gmoney/nba-rookies-by-min-1980-2016). This file was then converted into a csv (nba_hof_rookies.csv).
+We used several datasets for our project:
 
-<img width="1004" alt="Data_image" src="https://user-images.githubusercontent.com/60076980/167962935-2c5b4c90-f5e9-4a8e-8895-c0e7bf329876.png">
+- NBA Rookies by Year_Hall of Fame Class.xlsx - https://data.world/gmoney/nba-rookies-by-min-1980-2016
+    - This file was then converted into a csv (nba_hof_rookies.csv).
+- NBA_Full_Draft_1947-2018.csv - https://www.kaggle.com/datasets/hrfang1995/nba-drafts-of-19472018
+- NBA-playerlist.csv - https://sports-statistics.com/sports-data/nba-basketball-datasets-csv-files/
+- basketball.sqlite - https://www.kaggle.com/datasets/wyattowalsh/basketball
 
 ## **Questions we hope to answer with the data**
 - Can we accurately predict an NBA players induction into the Hall of Fame based on their statistics from their rookie season?
@@ -94,7 +98,7 @@ To see all SQL statements and our Database ERD (image also below) please refer t
 - Description of preliminary feature engineering and preliminary feature selection, including the decision-making process
 
     *   Feature selection for this project was very straight forward, as most of the features were related to in-game statistics like points, shots made, shot attempts, turnovers, etc. These features were all kept as removing them had a negative impact on our machine learning model (see optimization table below). There were several non-performance related features like number of games played, average minutes played per game, and draft year, etc. These features were dropped since they did not directly relate to a player’s performance and would likely not help with the machine learning model. The only features that were kept for use in the model were those that were related to the players draft position, since these were a strong indication of a players ability coming into the NBA for their rookies season. 
-    *   
+      
 - Description of how data was split into training and testing sets
 
     *   The data was shuffled and split into the training and test sets using the default parameters, which is `train_size = 0.25` and `test_size = 0.75` per [the sklearn documentation](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html).
@@ -163,6 +167,23 @@ Because the best performing model had changed, all optimization were run again a
 ## **Database**
 Using a combination of SQL, Pandas, PgAdmin and AWS multiple files were loaded, joined, and used as input to the analysis and modeling process. 
 
+A Globally Unique ID (GUID) was created by concatenating the player's full name and the year in which they were drafted, converting to upper case, and stripping all punctuation and white space.  This is the field on which all database tables were joined and addressed our issue with the ways player's names were recorded in our various source data sets (J.J. vs JJ, etc.) as well as players who share the same name.
+
+The following modifications were made to specific .ipynb files:
+
+NBA_HOF_Rookies_v02
+- Removed spaces from all column names
+- Separated HOFClass and HOFStatus fields
+
+Draft_Position_v02
+- Included Drafting Team and College fields
+
+Career_Duration_v02
+- Created calculated columns for Years_Played (TO_YEAR - FROM_YEAR +1) and HOF_Elgibility_Year (TO_YEAR +5, based on current HOF eligibility criteria)
+
+Within the database, the new comprehensive_dataset table was created with a constraint of "HOF_Elgibility_Year" <= 2021 to exclude players who are not yet eligible for Hall of Fame consideration, and are therefore showing up as 'false negatives' in the data that is provided to the Machine Learning algorithm.
+
+**ERD**
 <img width="585" alt="ERD2" src="https://user-images.githubusercontent.com/60076980/172018262-64936ed8-de52-4f4d-9382-39cc9cafd55d.png">
 
 ## **Dashboard**
