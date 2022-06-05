@@ -183,8 +183,9 @@ Career_Duration_v02
 
 Within the database, the new comprehensive_dataset table was created with a constraint of "HOF_Elgibility_Year" <= 2021 to exclude players who are not yet eligible for Hall of Fame consideration, and are therefore showing up as 'false negatives' in the data that is provided to the Machine Learning algorithm.
 
-**ERD**
-<img width="585" alt="ERD2" src="https://user-images.githubusercontent.com/60076980/172018262-64936ed8-de52-4f4d-9382-39cc9cafd55d.png">
+**Entity Relationship Diagram**
+
+<img width="634" alt="ERDFinal" src="https://user-images.githubusercontent.com/60076980/172059740-4ed3495c-4cd4-4b07-bbdb-c12dc707deef.png">
 
 ## **Dashboard**
 Using Tableau we are able create a story that helps visualize our project using several charts and interactive elements. 
