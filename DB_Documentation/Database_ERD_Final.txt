@@ -1,0 +1,114 @@
+new_career_duration
+- 
+GUID varchar PK
+NAME_FIRST_LAST varchar
+NAME_LAST_FIRST varchar
+FROM_YEAR   date
+TO_YEAR date
+
+new_draft_position
+-
+GUID varchar PK
+Player varchar
+Year int
+Pick int
+
+new_rookies_df
+-
+GUID varchar PK
+Name varchar
+HallofFameClass  varchar
+YearDrafted int
+GP int
+MIN numeric
+PTS numeric
+FGM numeric
+FGA numeric
+FG% numeric
+3PMade numeric
+3PA numeric
+3P% numeric
+FTM numeric
+FTA numeric
+FT% numeric
+OREB    numeric
+DREB    numeric
+REB numeric
+AST numeric
+STL numeric
+BLK numeric
+TOV numeric
+EFF numeric
+
+basketball_db_Draft 
+- 
+GUID varchar PK
+idPlayer int 
+namePlayer varchar
+yearDraft int
+numberRound int
+numberPickOverall int
+ 
+basketball_db_Player_Attributes 
+- 
+ID int 
+GUID varchar PK
+BIRTHDATE date
+POSITION varchar
+AGE_ROOKIE_SEASON int
+Draft_Decade varchar
+
+basketball_db_Joined 
+- 
+GUID varchar PK
+idPlayer int
+namePlayer varchar
+yearDraft int
+numberRound int
+numberPickOverall int
+BIRTHDATE date
+POSITION varchar
+AGE_ROOKIE_SEASON numeric
+Draft_Decade varchar
+
+final_dataset 
+- 
+GUID varchar PK
+Name varchar
+HallOfFameStatus varchar
+HallofFameClass int
+YearDrafted int
+TO_YEAR int
+Years_Played int
+HOF_Elgibility_Year int
+Pick int
+Team varchar
+College varchar
+GP int
+MIN numeric
+PTS numeric
+FGM numeric
+FGA numeric
+FG% numeric
+3P_Made numeric
+3PA numeric
+3P% numeric
+FTM numeric
+FTA numeric
+FT% numeric
+OREB numeric
+DREB numeric
+REB numeric
+AST numeric
+STL numeric
+BLK numeric
+TOV numeric
+EFF numeric
+idPlayer int
+numberRound int
+BIRTHDATE date
+POSITION varchar
+AGE_ROOKIE_SEASON numeric
+Draft_Decade varchar
+ML_Prediction int
+ConfusionMatrix varchar
