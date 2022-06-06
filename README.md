@@ -187,11 +187,13 @@ Within the database, the new comprehensive_dataset table was created with a cons
 
 <img width="634" alt="ERDFinal" src="https://user-images.githubusercontent.com/60076980/172059740-4ed3495c-4cd4-4b07-bbdb-c12dc707deef.png">
 
-## **Dashboard**
+## **Tableau Dashboard**
+
+View our dashboard here https://public.tableau.com/app/profile/hugo6550/viz/hof_predictions/Story1?publish=yes
+
 Using Tableau we are able create a story that helps visualize our project using several charts and interactive elements. 
 
 One of our interactive elements is a moveable quadrant graph that highlights every player's Points Per Game(PPG) And Minutes Played(MP) in their rookie season.
-   
 
-## Tableau Dashboard
-https://public.tableau.com/app/profile/hugo6550/viz/hof_predictions/Story1?publish=yes
+<img width="760" alt="TableauStory3" src="https://user-images.githubusercontent.com/60076980/172153074-12a0683d-f4aa-46af-a2f6-db846a49f13d.png">
+
