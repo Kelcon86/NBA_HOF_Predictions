@@ -19,3 +19,5 @@ Our group has communicated through a dedicated Slack channel as well as via Zoom
 
 
 
+## Tableau Dashboard
+https://public.tableau.com/app/profile/hugo6550/viz/hof_predictions/Story1?publish=yes
