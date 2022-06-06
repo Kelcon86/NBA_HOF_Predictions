@@ -1,0 +1,114 @@
+-- Initial Query to Join Data Obtained from nba_hof_Rookies.csv, NBA-playerlist.csv and NBA_Full_Draft_1947-2018.csv
+-- Also excluded records for players not yet elgible for induction into the HOF (and for whom no outcome can be known)
+
+SELECT 
+	new_rookies."GUID",
+	new_rookies."Name",
+	new_rookies."HallOfFameStatus",
+	new_rookies."HallofFameClass",
+	new_rookies."YearDrafted",
+	new_career_duration."TO_YEAR",
+	new_career_duration."Years_Played",
+	new_career_duration."HOF_Elgibility_Year",
+	new_draft."Pick",
+	new_draft."Team",
+	new_draft."College",
+	new_rookies."GP",
+	new_rookies."MIN",
+	new_rookies."PTS",
+	new_rookies."FGM",
+	new_rookies."FGA",
+	new_rookies."FG%",
+	new_rookies."3P_Made",
+	new_rookies."3PA",
+	new_rookies."3P%",
+	new_rookies."FTM",
+	new_rookies."FTA",
+	new_rookies."FT%",
+	new_rookies."OREB",
+	new_rookies."DREB",
+	new_rookies."REB",
+	new_rookies."AST",
+	new_rookies."STL",
+	new_rookies."BLK",
+	new_rookies."TOV",
+	new_rookies."EFF"	
+INTO comprehensive_dataset
+FROM new_rookies
+LEFT JOIN new_career_duration
+ON new_rookies."GUID" = new_career_duration."GUID"
+LEFT JOIN new_draft
+ON new_rookies."GUID" = new_draft."GUID"
+WHERE new_career_duration."HOF_Elgibility_Year" <= 2021
+ORDER BY new_career_duration."HOF_Elgibility_Year" ASC;
+
+-- Initial Query to Join Data Obtained from multiple tables within basketball.sqlite data source
+
+SELECT							
+	"basketball_db_Draft"."GUID",
+	"basketball_db_Player_Attributes"."GUID" AS "Player_Attributes.GUID",
+	"basketball_db_Draft"."idPlayer",				
+	"basketball_db_Player_Attributes"."ID",				
+	"basketball_db_Draft"."namePlayer",				
+	"basketball_db_Draft"."yearDraft",				
+	"basketball_db_Draft"."numberRound",				
+	"basketball_db_Draft"."numberPickOverall",				
+	"basketball_db_Player_Attributes"."BIRTHDATE",
+	"basketball_db_Player_Attributes"."POSITION",
+	"basketball_db_Player_Attributes"."AGE_ROOKIE_SEASON",				
+	"basketball_db_Player_Attributes"."Draft_Decade"
+INTO "basketball_db_Joined"
+FROM "basketball_db_Draft"
+LEFT JOIN "basketball_db_Player_Attributes"							
+ON "basketball_db_Draft"."idPlayer" = "basketball_db_Player_Attributes"."ID";
+
+- Query to Join all data sources, the result of which is the table used for Machine Learning
+
+SELECT 
+	comprehensive_dataset."GUID",
+	comprehensive_dataset."Name",
+	comprehensive_dataset."HallOfFameStatus",
+	comprehensive_dataset."HallofFameClass",
+	comprehensive_dataset."YearDrafted",
+	comprehensive_dataset."TO_YEAR",
+	comprehensive_dataset."Years_Played",
+	comprehensive_dataset."HOF_Elgibility_Year",
+	comprehensive_dataset."Pick",
+	comprehensive_dataset."Team",
+	comprehensive_dataset."College",
+	comprehensive_dataset."GP",
+	comprehensive_dataset."MIN",
+	comprehensive_dataset."PTS",
+	comprehensive_dataset."FGM",
+	comprehensive_dataset."FGA",
+	comprehensive_dataset."FG%",
+	comprehensive_dataset."3P_Made",
+	comprehensive_dataset."3PA",
+	comprehensive_dataset."3P%",
+	comprehensive_dataset."FTM",
+	comprehensive_dataset."FTA",
+	comprehensive_dataset."FT%",
+	comprehensive_dataset."OREB",
+	comprehensive_dataset."DREB",
+	comprehensive_dataset."REB",
+	comprehensive_dataset."AST",
+	comprehensive_dataset."STL",
+	comprehensive_dataset."BLK",
+	comprehensive_dataset."TOV",
+	comprehensive_dataset."EFF",
+	"basketball_db_Joined"."basketball_db_Draft_GUID",
+	"basketball_db_Joined"."basketball_db_Player_Attributes_GUID",
+	"basketball_db_Joined"."idPlayer",
+	"basketball_db_Joined"."ID",
+	"basketball_db_Joined"."namePlayer",
+	"basketball_db_Joined"."yearDraft",
+	"basketball_db_Joined"."numberRound",
+	"basketball_db_Joined"."numberPickOverall",
+	"basketball_db_Joined"."BIRTHDATE",
+	"basketball_db_Joined"."POSITION",
+	"basketball_db_Joined"."AGE_ROOKIE_SEASON",
+	"basketball_db_Joined"."Draft_Decade",
+INTO final_dataset
+FROM comprehensive_dataset
+LEFT JOIN comprehensive_dataset
+ON comprehensive_dataset."GUID"" = "basketball_db_Joined"."basketball_db_Draft_GUID";
