@@ -192,4 +192,5 @@ Using Tableau we are able create a story that helps visualize our project using 
 
 One of our interactive elements is a moveable quadrant graph that highlights every player's Points Per Game(PPG) And Minutes Played(MP) in their rookie season.
    
-<img width="760" alt="TableauStory3" src="https://user-images.githubusercontent.com/60076980/172018401-79f305af-9185-42ff-aa23-e56b4a7e6f4d.png">
+
+https://prod-useast-a.online.tableau.com/t/hofrookiespredictions/views/hof_predictions/Story1/8ea31255-cbcc-4e3a-b124-03a3c0b69b67/68491fab-2499-43ff-97db-812831ace7ae?:display_count=n&:showVizHome=n&:origin=viz_share_link
