@@ -187,6 +187,15 @@ Within the database, the new comprehensive_dataset table was created with a cons
 
 <img width="634" alt="ERDFinal" src="https://user-images.githubusercontent.com/60076980/172059740-4ed3495c-4cd4-4b07-bbdb-c12dc707deef.png">
 
+## **Result of Analysis**
+We discovered that our model performed better than we had initially expected. We were able to accurately predict 85.7% of players that were inducted into the Hall of Fame.
+
+## **Recommendation for Future Analysis**
+We would be interested in seeing how the results change if we were to include data from additional seasons. We also talked about the possibility of seeing if we could accurately predict how many years it would take for a player to be inducted into the Hall of Fame.
+
+## **What we would have done differently**
+Some of the things that we wished we would have done was to find a dataset that included rookie year awards among other data that was not included in the original datasets.
+
 ## **Tableau Dashboard**
 
 View our dashboard here https://public.tableau.com/app/profile/hugo6550/viz/hof_predictions/Story1?publish=yes
