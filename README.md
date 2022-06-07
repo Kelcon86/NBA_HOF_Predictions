@@ -1,7 +1,7 @@
 # **NBA Hall of Fame Predictions**
 
 ## **Selected topic**
-Predicting if a National Basketball Association (NBA) player will be inducted into the Hall of Fame (HOF) based only on their draft position and rookie season statistics.
+Predicting if a National Basketball Association (NBA) player will be inducted into the Hall of Fame (HOF) based on their draft position and rookie season statistics.
 
 ## **Reason why topic was selected**
 After brainstorming we found that everyone in the group had an interest in sports. We knew there would be an abundance of data for professional sports leagues and decided to choose a topic involving the NBA. We were interested to see if there was any correlation between a player’s induction into the Hall of Fame and their draft and rookie season statistics.
@@ -194,6 +194,8 @@ View our dashboard here https://public.tableau.com/app/profile/hugo6550/viz/hof_
 Using Tableau we are able create a story that helps visualize our project using several charts and interactive elements. 
 
 One of our interactive elements is a moveable quadrant graph that highlights every player's Points Per Game(PPG) And Minutes Played(MP) in their rookie season.
+<img width="691" alt="TableauStory1" src="https://user-images.githubusercontent.com/60076980/172277671-d1f10906-d0cb-4659-bc15-9230a0de3dc7.png">
 
 <img width="760" alt="TableauStory3" src="https://user-images.githubusercontent.com/60076980/172153074-12a0683d-f4aa-46af-a2f6-db846a49f13d.png">
 
+<img width="735" alt="TableauStory4" src="https://user-images.githubusercontent.com/60076980/172277692-10438eb6-28f8-4547-8366-7671c3f27ee6.png">
