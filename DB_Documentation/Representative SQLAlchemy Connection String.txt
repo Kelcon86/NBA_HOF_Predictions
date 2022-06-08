@@ -1,0 +1,10 @@
+# import the necessary packages
+import psycopg2
+from sqlalchemy import create_engine
+  
+# Create the engine to connect to the database 
+engine = create_engine(
+    'postgresql+psycopg2://postgres:[password]@[hostname]:[port]/[DB]')
+
+# Write data into the table in database
+rookies_df.to_sql('new_rookies', engine)
