@@ -112,3 +112,10 @@ INTO final_dataset
 FROM comprehensive_dataset
 LEFT JOIN comprehensive_dataset
 ON comprehensive_dataset."GUID"" = "basketball_db_Joined"."basketball_db_Draft_GUID";
+
+- Query to display results of ConfusionMatrix
+
+SELECT "ConfusionMatrix",
+COUNT ("GUID")
+FROM final_dataset
+GROUP BY "ConfusionMatrix";
