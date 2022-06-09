@@ -1,0 +1,33 @@
+anconda-client @ file:///C:/ci/anaconda-client_1635342757050/work
+anaconda-project @ file:///tmp/build/80754af9/anaconda-project_1626085644852/work
+conda==4.12.0
+conda-content-trust @ file:///tmp/build/80754af9/conda-content-trust_1617045594566/work
+conda-pack @ file:///tmp/build/80754af9/conda-pack_1611163042455/work
+conda-package-handling @ file:///C:/ci/conda-package-handling_1649106008722/work
+conda-token @ file:///tmp/build/80754af9/conda-token_1620076980546/work
+ipykernel @ file:///C:/ci/ipykernel_1633527406033/work/dist/ipykernel-6.4.1-py3-none-any.whl
+ipython @ file:///C:/ci/ipython_1635944342510/work
+imbalanced-learn==0.9.0
+imblearn==0.0
+jupyter==1.0.0
+jupyter-client @ file:///tmp/build/80754af9/jupyter_client_1616770841739/work
+jupyter-console @ file:///tmp/build/80754af9/jupyter_console_1616615302928/work
+jupyter-core @ file:///C:/ci/jupyter_core_1633402341948/work
+jupyter-server @ file:///C:/ci/jupyter_server_1616084265530/work
+jupyterlab @ file:///tmp/build/80754af9/jupyterlab_1635799997693/work
+jupyterlab-pygments @ file:///tmp/build/80754af9/jupyterlab_pygments_1601490720602/work
+jupyterlab-server @ file:///tmp/build/80754af9/jupyterlab_server_1633419203660/work
+jupyterlab-widgets @ file:///tmp/build/80754af9/jupyterlab_widgets_1609884341231/work
+jupyterthemes==0.20.0
+matplotlib @ file:///C:/ci/matplotlib-suite_1634667159685/work
+matplotlib-inline @ file:///tmp/build/80754af9/matplotlib-inline_1628242447089/work
+numpy @ file:///C:/ci/numpy_and_numpy_base_1626271861146/work
+pandas @ file:///C:/ci/pandas_1635506714241/work
+path @ file:///C:/ci/path_1624287869200/work
+pickleshare @ file:///tmp/build/80754af9/pickleshare_1606932040724/work
+psycopg2==2.9.3
+scikit-image==0.18.3
+scikit-learn @ file:///C:/ci/scikit-learn_1622739441385/work
+scikit-learn-intelex==2021.20210714.120613
+scipy @ file:///C:/ci/scipy_1630606897162/work
+SQLAlchemy @ file:///C:/ci/sqlalchemy_1626948528806/work
