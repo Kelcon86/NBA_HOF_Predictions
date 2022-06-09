@@ -205,7 +205,7 @@ Some of the things that we wished we would have done was to find a dataset that 
 
 ## **Tableau Dashboard**
 
-Please [click this link to view our dashboard](https://public.tableau.com/app/profile/hugo6550/viz/hof_predictions/Story1?publish=yes)
+Please [click this link to view our dashboard](https://prod-useast-a.online.tableau.com/t/hofrookiespredictions/views/hof_predictions/Story1?:showAppBanner=false&:display_count=n&:showVizHome=n&:origin=viz_share_link)
 
 Using Tableau we are able create a story that helps visualize our project using several charts and interactive elements. 
 
