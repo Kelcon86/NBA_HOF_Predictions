@@ -92,6 +92,8 @@ To see all SQL statements and our Database ERD (image also below) please refer t
 - PgAdmin
 - Tableau
 
+To see all dependencies used please refer to the [requirements text file](https://github.com/Kelcon86/NBA_HOF_Predictions/blob/main/requirements.txt) in our repository
+
 ## **Machine Learning**
 
 ### **Analysis Phase**
@@ -99,7 +101,7 @@ To see all SQL statements and our Database ERD (image also below) please refer t
 
     *   Feature selection for this project was very straight forward, as most of the features were related to in-game statistics like points, shots made, shot attempts, turnovers, etc. These features were all kept as removing them had a negative impact on our machine learning model (see optimization table below). There were several non-performance related features like number of games played, average minutes played per game, and draft year, etc. These features were dropped since they did not directly relate to a player’s performance and would likely not help with the machine learning model. The only features that were kept for use in the model were those that were related to the players draft position, since these were a strong indication of a players ability coming into the NBA for their rookies season. 
       
-- Description of how data was split into training and testing sets
+- Description of how data was split into training and testing sets and trained
 
     *   The data was shuffled and split into the training and test sets using the default parameters, which is `train_size = 0.25` and `test_size = 0.75` per [the sklearn documentation](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html).
 
@@ -154,13 +156,16 @@ Upon joining the data and running all the experimental models again to look for 
 
 Because the best performing model had changed, all optimization were run again and this new final version of the model was used for deployment on the dataset.
 
-### **Model Accuracy**
+### **Final Model Accuracy and Results**
 
 *   Training Accuracy - 88.27%
 *   Testing Accuracy - 85.08%
 *   Deployment Accuracy - 88.66%
+*   Receiver Operating Characteristic: Area Under the Curve - 0.88
 
+![](machine_learning/img/experiments/ros_results.png)
 ![](machine_learning/img/CM/cm_sql_query.png)
+![](machine_learning/img/ROC/ROC.png)
     
 *   Deployment accuracy calculated by taking the number of correct predictions (True Positives + True Negatives) over total rows (1217)
 
