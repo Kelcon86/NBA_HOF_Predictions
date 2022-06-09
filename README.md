@@ -136,6 +136,8 @@ This table shows the different optimization attempts made pertaining to feature 
 
 *   To see the files used to run all these optimization attempts, please refer to the [optimizations folder](https://github.com/Kelcon86/NBA_HOF_Predictions/tree/main/machine_learning/optimizations) in our repository.
 
+*   To see the file the contains all feature statistics (mean, min/max, std. etc) please refer to the [feature statistics file](https://github.com/Kelcon86/NBA_HOF_Predictions/blob/main/machine_learning/feature_describe/feature_stat_descriptions.ipynb) in our repository.
+
 Based on these results, the baseline features (draft and all performance stats) had the best outcome. No features will be removed for model training for deployment.  
 
 #### **Benefits and Limitations**
