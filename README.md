@@ -205,8 +205,7 @@ Some of the things that we wished we would have done was to find a dataset that 
 
 ## **Tableau Dashboard**
 
-Please [click this link to view our dashboard](https://prod-useast-a.online.tableau.com/t/hofrookiespredictions/views/hof_predictions/Story1?:showAppBanner=false&:display_count=n&:showVizHome=n&:origin=viz_share_link)
-
+Please [click this link to view our dashboard](https://public.tableau.com/views/hof_predictions-2/Story1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
 Using Tableau we are able create a story that helps visualize our project using several charts and interactive elements. 
 
 One of our interactive elements is a moveable quadrant graph that highlights every player's Points Per Game(PPG) And Minutes Played(MP) in their rookie season.
